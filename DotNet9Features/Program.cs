@@ -1,4 +1,6 @@
-﻿using DotNet9Features.FeatureSwitching;
+﻿using DotNet9Features._2___LinqStuff;
+using DotNet9Features._3___Span;
+using DotNet9Features.FeatureSwitching;
 
 /// Feature Switching
 /// Only Enable when the property on project named RuntimeHostConfigurationOption is set true, that is good for disabling or
@@ -8,4 +10,16 @@ Feature.DoTheThing();
 
 
 //Linq Stuff
+//1 AggregateFeature - Instead of using select+groupby in order to know the total time peer runner use aggregateBy
+//2 CountByFeature - CountBy will return a dictionary with the key and the total of marathons that runner participated
+LinqStuff.DoLinqStuff();
 
+
+//SpanPlansDance
+// Overview all time that you will be using any type (string, object, int, collections) try to see if we can replace it with ReadOnlySpan<char> cause ocupe less memory and is faster
+//1 ReadOnlySpanAsKeyFeature - I feel that is for really and extremally performance string handle purpose, cause use a alternative dictionary only
+// to use ReadOnlySpan<char> as key increse complexity as well the implementation itself
+//2 ReadOnlyAsParamsFeature - The benefit to use ReadOnlySpan as params is that you can pass a collection of numbers without the need to create a new array
+//3 ReadOnlyAsHashSetFeature - Simple representation of a hasset in readonly mode as all the other ReadOnlySpan features less memory alocation purpose
+
+SpanPlansDance.DoSpanPlansDance();
