@@ -10,7 +10,6 @@ namespace DotNet9Features._2___LinqStuff
     {
         internal static void DoLinqStuff()
         {
-            var totalDurationTimeCollection = new List<(int Id, TimeOnly Duration)>();
 
             var marathonCollection = new List<Marathon>
             {

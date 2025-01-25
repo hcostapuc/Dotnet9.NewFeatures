@@ -1,5 +1,7 @@
 ﻿using DotNet9Features._2___LinqStuff;
 using DotNet9Features._3___Span;
+using DotNet9Features._4___Json;
+using DotNet9Features._5___Guid;
 using DotNet9Features.FeatureSwitching;
 
 /// Feature Switching
@@ -23,3 +25,14 @@ LinqStuff.DoLinqStuff();
 //3 ReadOnlyAsHashSetFeature - Simple representation of a hasset in readonly mode as all the other ReadOnlySpan features less memory alocation purpose
 
 SpanPlansDance.DoSpanPlansDance();
+
+
+//Json
+//Now in .net 9 they remove the integration with swagger by default, if you want to use it you need to install the package, but
+//they provided a feature to expose the scheme as showing on the code.
+JsonStuff.FeatureSchemeAsNode();
+
+//Guid
+// Now you can create the version 7 of the GUID, this bring more performance to databases cause the guid is created sequencially
+// improving indexes and searchs
+GuidVersion7.GenerateGuidVersion7();
